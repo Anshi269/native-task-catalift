@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="ExtraText">
+
+        <!-- Illustration -->
+        <ImageView
+            android:id="@+id/ivCataliftIllustration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cataliftimg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Brand Name -->
+        <TextView
+            android:id="@+id/tvBrandName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C A T A L I F T"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/ivCataliftIllustration"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Horizontal Line Under "LIFT" -->
+        <!-- Adjust margin to position the line correctly -->
+        android:layout_marginStart="-50dp" <!-- Adjust margin to align with "LIFT" -->
+        android:visibility="visible"
+            android:layout_width="100dp" <!-- Adjust width to fit "LIFT" --><![CDATA[
+         />
+
+
+
+
+
+
+
+
+
+
+
+
+        ]]>
+
+        <View
+            android:id="@+id/horizontalLine"
+            android:layout_width="66dp"
+            android:layout_height="2dp"
+            android:layout_marginEnd="136dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/tvBrandName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivCataliftIllustration"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/tvTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Give your career an EXTRA boost"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/tvBrandName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Sign-In Section -->
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTagline">
+
+            <TextView
+                android:id="@+id/tvSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="25dp"
+                android:text="Sign-In"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvPrivacyPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy"
+                android:layout_marginStart="175dp"
+                android:layout_marginEnd="25dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <!-- Phone Number Input -->
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            style="@style/InputField"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="44dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp" />
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/etPassword"
+            style="@style/InputField"
+            android:hint="Password"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@id/etPhoneNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp" />
+
+        <!-- Forgot Password Text -->
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/etPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp" />
+
+        <!-- Sign-In Button -->
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign-In"
+            android:textColor="@color/white"
+            android:background="@drawable/button_background"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvForgotPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp" />
+
+        <!-- Google Sign-In Button -->
+        <LinearLayout
+            android:id="@+id/btnGoogleSignInWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/google_button_background"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintTop_toBottomOf="@id/btnSignIn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/ivGoogleIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_google"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvGoogleSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign in with Google"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Sign-Up Link -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/btnGoogleSignInWrapper"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't Have An Account? "
+                android:textSize="14sp"
+                android:textColor="@color/textColor" />
+
+            <TextView
+                android:id="@+id/tvSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign-Up"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

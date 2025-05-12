@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <!-- Progress Bar -->
+    <View
+        android:id="@+id/progressBar"
+        android:layout_width="80dp"
+        android:layout_height="6dp"
+        android:background="@drawable/rounded_progress"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvPersonalDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Personal Details"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!-- Full Name -->
+    <TextView
+        android:id="@+id/tvFullNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name *"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/tvPersonalDetails"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <EditText
+        android:id="@+id/etFullName"
+        style="@style/InputField2"
+        android:hint="Full Name"
+        android:text="Aman Singh"
+        app:layout_constraintTop_toBottomOf="@id/tvFullNameLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Student ID -->
+    <TextView
+        android:id="@+id/tvStudentIdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student ID"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/etFullName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etStudentId"
+        style="@style/InputField2"
+        android:hint="Student ID"
+        android:text="190909512"
+        app:layout_constraintTop_toBottomOf="@id/tvStudentIdLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- DOB -->
+    <TextView
+        android:id="@+id/tvDobLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DOB *"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/etStudentId"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/llDatePickers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvDobLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <Spinner
+            android:id="@+id/spinnerDay"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_background_witharrow"
+            android:layout_marginEnd="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerMonth"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_background_witharrow"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp" />
+
+        <Spinner
+            android:id="@+id/spinnerYear"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_background_witharrow"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Mother Tongue -->
+    <TextView
+        android:id="@+id/tvMotherTongueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mother Tongue *"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/llDatePickers"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerMotherTongue"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/edit_background_witharrow"
+        app:layout_constraintTop_toBottomOf="@id/tvMotherTongueLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Gender -->
+    <TextView
+        android:id="@+id/tvGenderLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender *"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/spinnerMotherTongue"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerGender"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/edit_background_witharrow"
+        app:layout_constraintTop_toBottomOf="@id/tvGenderLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Phone Number -->
+    <TextView
+        android:id="@+id/tvPhoneNumberLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number *"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/spinnerGender"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        style="@style/InputField2"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/tvPhoneNumberLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Email Address -->
+    <TextView
+        android:id="@+id/tvEmailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Address *"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/etPhoneNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        style="@style/InputField2"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/tvEmailLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- LinkedIn -->
+    <TextView
+        android:id="@+id/tvLinkedInLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LinkedIn"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etLinkedIn"
+        style="@style/InputField2"
+        android:inputType="textUri"
+        app:layout_constraintTop_toBottomOf="@id/tvLinkedInLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Submit"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/etLinkedIn"
+        android:background="@drawable/button_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
